@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FLUX — Creator OS</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">FLUX</div>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#testimonials">Stories</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-ghost" onclick="openModal('login')">Sign In</button>
+    <button class="btn-primary" onclick="openModal('register')">Get Early Access</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-glow-3"></div>
+
+  <div class="hero-eyebrow">
+    <div class="hero-eyebrow-dot"></div>
+    Now in Early Access
+  </div>
+
+  <h1 class="hero-headline">
+    Your Creative<br>OS. <em>Finally.</em>
+  </h1>
+
+  <p class="hero-sub">
+    The all-in-one system for creators who ship. Capture ideas, run your pipeline, track your growth — without the chaos.
+  </p>
+
+  <div class="hero-cta">
+    <button class="hero-btn-main" onclick="openModal('register')">Start for Free →</button>
+    <button class="hero-btn-secondary" onclick="openModal('login')">I have an account</button>
+  </div>
+
+  <div class="hero-social-proof">
+    <div class="avatars">
+      <div class="av">R</div>
+      <div class="av">J</div>
+      <div class="av">A</div>
+      <div class="av">M</div>
+      <div class="av">S</div>
+    </div>
+    <div class="proof-text">
+      Joined by <strong>2,400+ creators</strong><br>this week alone.
+    </div>
+  </div>
+
+  <!-- Phone mockup showcase -->
+  <div class="phone-showcase">
+    <div class="phone-showcase-inner">
+      <!-- Side phone 1 -->
+      <div class="mini-phone side">
+        <div class="mini-di"></div>
+        <div class="mini-screen">
+          <div class="sim-header">
+            <div class="sim-title">Library</div>
+            <div class="sim-sub">78 creations</div>
+          </div>
+          <div class="sim-section"><div class="sim-sec-label">This Week</div></div>
+          <div class="sim-row">
+            <div class="sim-row-ico" style="background:rgba(245,166,35,0.08)">💡</div>
+            <div class="sim-row-body"><div class="sim-row-title">Morning routine</div><div class="sim-row-meta">Today · Idea</div></div>
+          </div>
+          <div class="sim-row">
+            <div class="sim-row-ico" style="background:rgba(155,127,255,0.08)">🎙️</div>
+            <div class="sim-row-body"><div class="sim-row-title">Shower thought</div><div class="sim-row-meta">Yesterday · Voice</div></div>
+          </div>
+          <div class="sim-row">
+            <div class="sim-row-ico" style="background:rgba(94,155,255,0.08)">🎬</div>
+            <div class="sim-row-body"><div class="sim-row-title">Gym Edit #3</div><div class="sim-row-meta">Feb 16 · Shoot</div></div>
+          </div>
+          <div class="sim-tab-bar">
+            <div class="sim-tab"><span class="sim-tab-ico">⚡</span><span class="sim-tab-lbl">Home</span></div>
+            <div class="sim-tab"><span class="sim-tab-ico">🎬</span><span class="sim-tab-lbl">Pipeline</span></div>
+            <div class="sim-tab"><span class="sim-tab-ico on">📁</span><span class="sim-tab-lbl on">Library</span></div>
+            <div class="sim-tab"><span class="sim-tab-ico">👤</span><span class="sim-tab-lbl">Account</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center phone (featured) -->
+      <div class="mini-phone center">
+        <div class="mini-di"></div>
+        <div class="mini-screen">
+          <div class="sim-header">
+            <div class="sim-title">Good morning, Ryan ⚡</div>
+            <div class="sim-sub">You're on a 4-day streak 🔥</div>
+          </div>
+          <div class="sim-grid">
+            <div class="sim-card amber">
+              <div class="sim-card-ico">💡</div>
+              <div class="sim-card-title">Capture Idea</div>
+            </div>
+            <div class="sim-card blue">
+              <div class="sim-card-ico">🎬</div>
+              <div class="sim-card-title">Log Shoot</div>
+            </div>
+            <div class="sim-card violet">
+              <div class="sim-card-ico">🎙️</div>
+              <div class="sim-card-title">Voice Memo</div>
+            </div>
+            <div class="sim-card teal">
+              <div class="sim-card-ico">📊</div>
+              <div class="sim-card-title">Pipeline</div>
+            </div>
+          </div>
+          <div class="sim-section"><div class="sim-sec-label">In Progress</div></div>
+          <div class="sim-row">
+            <div class="sim-row-ico" style="background:rgba(155,127,255,0.08)">✂️</div>
+            <div class="sim-row-body"><div class="sim-row-title">NYC Vlog cut</div><div class="sim-row-meta">Due Fri</div></div>
+            <div class="sim-row-status status-edit">EDITING</div>
+          </div>
+          <div class="sim-row">
+            <div class="sim-row-ico" style="background:rgba(94,155,255,0.08)">🎥</div>
+            <div class="sim-row-body"><div class="sim-row-title">Gym series ep.4</div><div class="sim-row-meta">Sat 10am</div></div>
+            <div class="sim-row-status status-film">FILMING</div>
+          </div>
+          <div class="sim-tab-bar">
+            <div class="sim-tab"><span class="sim-tab-ico on">⚡</span><span class="sim-tab-lbl on">Home</span></div>
+            <div class="sim-tab"><span class="sim-tab-ico">🎬</span><span class="sim-tab-lbl">Pipeline</span></div>
+            <div class="sim-tab"><span class="sim-tab-ico">📁</span><span class="sim-tab-lbl">Library</span></div>
+            <div class="sim-tab"><span class="sim-tab-ico">👤</span><span class="sim-tab-lbl">Account</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side phone 2 -->
+      <div class="mini-phone side">
+        <div class="mini-di"></div>
+        <div class="mini-screen">
+          <div class="sim-header">
+            <div class="sim-title">Pipeline</div>
+            <div class="sim-sub">7 active videos</div>
+          </div>
+          <div class="sim-section"><div class="sim-sec-label">Editing</div></div>
+          <div class="sim-row">
+            <div class="sim-row-ico" style="background:rgba(155,127,255,0.08)">✂️</div>
+            <div class="sim-row-body"><div class="sim-row-title">Creator tools daily</div><div class="sim-row-meta">70% done</div></div>
+            <div class="sim-row-status status-edit">EDIT</div>
+          </div>
+          <div class="sim-section"><div class="sim-sec-label">Filming</div></div>
+          <div class="sim-row">
+            <div class="sim-row-ico" style="background:rgba(94,155,255,0.08)">🎥</div>
+            <div class="sim-row-body"><div class="sim-row-title">Day in life NYC</div><div class="sim-row-meta">Sat 10am</div></div>
+            <div class="sim-row-status status-film">FILM</div>
+          </div>
+          <div class="sim-section"><div class="sim-sec-label">Published</div></div>
+          <div class="sim-row">
+            <div class="sim-row-ico" style="background:rgba(50,215,75,0.07)">🎞️</div>
+            <div class="sim-row-body"><div class="sim-row-title">Why I quit 9-5</div><div class="sim-row-meta">Feb 11</div></div>
+            <div class="sim-row-status status-pub">LIVE</div>
+          </div>
+          <div class="sim-tab-bar">
+            <div class="sim-tab"><span class="sim-tab-ico">⚡</span><span class="sim-tab-lbl">Home</span></div>
+            <div class="sim-tab"><span class="sim-tab-ico on">🎬</span><span class="sim-tab-lbl on">Pipeline</span></div>
+            <div class="sim-tab"><span class="sim-tab-ico">📁</span><span class="sim-tab-lbl">Library</span></div>
+            <div class="sim-tab"><span class="sim-tab-ico">👤</span><span class="sim-tab-lbl">Account</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="showcase-fade"></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="section-eyebrow">What's inside</div>
+  <h2 class="section-title">Built for the way<br>creators actually work.</h2>
+
+  <div class="features-grid">
+    <div class="feature-card fc-amber animate-in">
+      <div class="feature-ico ico-amber">💡</div>
+      <div class="feature-title">Idea Capture, Instantly</div>
+      <p class="feature-desc">Voice memos, text dumps, screenshots. Every spark goes into FLUX before it disappears. No friction, no folders.</p>
+      <div class="feature-visual">
+        <div class="pipeline-mini">
+          <div class="pm-row" style="background:rgba(245,166,35,0.05);border-radius:10px;">
+            <div class="pm-dot b-idea"></div>
+            <span class="pm-label" style="font-size:12px;">💡 "Morning routine 5am version"</span>
+            <span class="pm-badge badge-idea">IDEA</span>
+          </div>
+          <div class="pm-row" style="background:rgba(155,127,255,0.05);border-radius:10px;">
+            <div class="pm-dot b-editing"></div>
+            <span class="pm-label" style="font-size:12px;">🎙️ "Shower thought on thumbnails"</span>
+            <span class="pm-badge badge-edit">VOICE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-card fc-violet animate-in">
+      <div class="feature-ico ico-violet">🎬</div>
+      <div class="feature-title">Visual Pipeline</div>
+      <p class="feature-desc">Every video, at every stage. Idea → Filming → Editing → Published. See your whole content machine at a glance.</p>
+      <div class="feature-visual">
+        <div class="pipeline-mini">
+          <div class="pm-row"><div class="pm-dot b-idea"></div><span class="pm-label">NYC Vlog</span><span class="pm-badge badge-idea">IDEA</span></div>
+          <div class="pm-row"><div class="pm-dot b-filming"></div><span class="pm-label">Gym Series Ep.4</span><span class="pm-badge badge-film">FILMING</span></div>
+          <div class="pm-row"><div class="pm-dot b-editing"></div><span class="pm-label">Creator Tools Daily</span><span class="pm-badge badge-edit">EDITING</span></div>
+          <div class="pm-row"><div class="pm-dot b-live"></div><span class="pm-label">Why I Quit 9-5</span><span class="pm-badge badge-live">LIVE</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-card large fc-teal animate-in">
+      <div class="feature-ico ico-teal">🔥</div>
+      <div class="feature-title">Streak & Momentum System</div>
+      <p class="feature-desc">Consistency is the difference between creators who grow and those who stall. FLUX tracks your daily output and keeps the fire alive — even when motivation doesn't show up.</p>
+      <div class="feature-visual">
+        <div class="streak-visual">
+          <div class="streak-bar"><div class="streak-bar-fill" style="height:40%;background:rgba(45,212,191,0.25);"></div></div>
+          <div class="streak-bar"><div class="streak-bar-fill" style="height:65%;background:rgba(45,212,191,0.35);"></div></div>
+          <div class="streak-bar"><div class="streak-bar-fill" style="height:80%;background:rgba(45,212,191,0.5);"></div></div>
+          <div class="streak-bar"><div class="streak-bar-fill" style="height:55%;background:rgba(45,212,191,0.4);"></div></div>
+          <div class="streak-bar"><div class="streak-bar-fill" style="height:90%;background:rgba(45,212,191,0.6);"></div></div>
+          <div class="streak-bar"><div class="streak-bar-fill" style="height:70%;background:rgba(45,212,191,0.5);"></div></div>
+          <div class="streak-bar"><div class="streak-bar-fill" style="height:100%;background:var(--accent-teal);"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-card fc-blue animate-in">
+      <div class="feature-ico ico-blue">📁</div>
+      <div class="feature-title">Searchable Library</div>
+      <p class="feature-desc">78 ideas, 24 videos, 12 shoots. Find anything in seconds. Your best ideas never rot in old notes apps again.</p>
+    </div>
+
+    <div class="feature-card fc-green animate-in">
+      <div class="feature-ico ico-green">☁️</div>
+      <div class="feature-title">Sync Everywhere</div>
+      <p class="feature-desc">iPhone, iPad, Mac. Your creative brain, always with you. Idea on the train? Captured. Edit brief in the gym? Done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="section-eyebrow">Pricing</div>
+  <h2 class="section-title">Simple. No surprises.</h2>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="pricing-plan">Free</div>
+      <div class="pricing-price">$0<span>/mo</span></div>
+      <div class="pricing-desc">For creators just getting started.</div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>Up to <strong>25 creations</strong></span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span><strong>Idea capture</strong> & voice notes</span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>Basic <strong>pipeline view</strong></span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>7-day <strong>streak tracking</strong></span></div>
+      <button class="pricing-btn outline" onclick="openModal('register')">Get Started Free</button>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Most Popular</div>
+      <div class="pricing-plan">Pro</div>
+      <div class="pricing-price">$12<span>/mo</span></div>
+      <div class="pricing-desc">For creators who publish consistently.</div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span><strong>Unlimited</strong> creations</span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>Full <strong>pipeline system</strong></span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>Advanced <strong>analytics</strong></span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span><strong>iCloud sync</strong> across devices</span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>Auto <strong>transcription</strong></span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>Priority <strong>support</strong></span></div>
+      <button class="pricing-btn amber" onclick="openModal('register')">Start Pro Trial →</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pricing-plan">Teams</div>
+      <div class="pricing-price">$29<span>/mo</span></div>
+      <div class="pricing-desc">For studios and creator collectives.</div>
+      <div class="pricing-divider"></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>Everything in <strong>Pro</strong></span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>Up to <strong>5 members</strong></span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>Shared <strong>pipeline boards</strong></span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>Team <strong>analytics dashboard</strong></span></div>
+      <div class="pricing-feature"><div class="pricing-check">✓</div><span>Dedicated <strong>onboarding</strong></span></div>
+      <button class="pricing-btn outline" onclick="openModal('register')">Contact Us</button>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="section-eyebrow">Creator Stories</div>
+  <h2 class="section-title">What the ones who use it say.</h2>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card animate-in">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">My idea-to-publish time dropped by 40%. I used to lose so many video concepts — now <strong>everything lands in FLUX</strong> the second it hits me.</p>
+      <div class="testi-author">
+        <div class="testi-av" style="background:linear-gradient(135deg,#F5A623,#ff6b00);color:#000;">R</div>
+        <div>
+          <div class="testi-name">Ryan Cho</div>
+          <div class="testi-handle">@ryancho · 280K subs</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card animate-in">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">The pipeline alone is worth it. I can see <strong>exactly where every video is</strong> without checking 5 different apps. My editor loves it too.</p>
+      <div class="testi-author">
+        <div class="testi-av" style="background:linear-gradient(135deg,#9B7FFF,#5e3be1);color:#fff;">J</div>
+        <div>
+          <div class="testi-name">Jasmine Lee</div>
+          <div class="testi-handle">@jasminelee · 89K subs</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card animate-in">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">I was skeptical but the streak system actually <strong>changed my behavior</strong>. I've published more in the last 60 days than all of last year.</p>
+      <div class="testi-author">
+        <div class="testi-av" style="background:linear-gradient(135deg,#2DD4BF,#0891b2);color:#000;">M</div>
+        <div>
+          <div class="testi-name">Marcus Webb</div>
+          <div class="testi-handle">@marcuswebb · 1.2M subs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-box">
+    <div class="cta-title">Start creating<br>with intent.</div>
+    <p class="cta-sub">Join 2,400+ creators who chose structure over chaos.</p>
+    <div class="cta-form">
+      <input class="cta-input" type="email" placeholder="your@email.com" id="cta-email">
+      <button class="cta-submit" onclick="handleCtaSubmit()">Get Access →</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">FLUX</div>
+  <div class="footer-links">
+    <a href="#">Features</a>
+    <a href="#">Pricing</a>
+    <a href="#">Blog</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+  <div class="footer-copy">© 2026 FLUX. All rights reserved.</div>
+</footer>
+
+<!-- ─── MODAL ─── -->
+<div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+  <div class="modal" id="modal">
+
+    <!-- REGISTER FORM -->
+    <div id="register-view">
+      <div class="modal-header">
+        <div class="modal-logo">FLUX</div>
+        <button class="modal-close" onclick="closeModal()">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tabs">
+          <div class="modal-tab" onclick="switchTab('login')">Sign In</div>
+          <div class="modal-tab active">Create Account</div>
+        </div>
+        <div class="modal-title">Join FLUX</div>
+        <p class="modal-subtitle">Start your 14-day free trial of Pro. No credit card required.</p>
+
+        <div class="social-btns">
+          <button class="social-btn" onclick="handleGoogleSignIn()">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885-1.328 1.232-3.142 1.896-5.3 1.896-3.866 0-7-3.134-7-7s3.134-7 7-7c1.89 0 3.47.697 4.688 1.83l-1.894 1.895C10.013 3.99 9.043 3.62 8 3.62c-2.421 0-4.38 1.96-4.38 4.38s1.959 4.38 4.38 4.38c2.209 0 3.72-1.261 3.952-3.005H8V7.558h7.545z" fill="#4285F4"/>
+            </svg>
+            Google
+          </button>
+          <button class="social-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            GitHub
+          </button>
+        </div>
+
+        <div class="divider-or">or continue with email</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input class="form-input" id="reg-first" type="text" placeholder="Ryan" oninput="clearErrors()">
+            <div class="form-error" id="err-first">Required.</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input class="form-input" id="reg-last" type="text" placeholder="Cho" oninput="clearErrors()">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input class="form-input" id="reg-email" type="email" placeholder="ryan@example.com" oninput="clearErrors()">
+          <div class="form-error" id="err-email">Enter a valid email.</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input class="form-input" id="reg-password" type="password" placeholder="Min. 8 characters" oninput="checkPasswordStrength(this.value)">
+          <div class="strength-bar"><div class="strength-fill" id="strength-fill"></div></div>
+          <div class="password-hint" id="strength-label">Enter a strong password</div>
+          <div class="form-error" id="err-password">Password must be at least 8 characters.</div>
+        </div>
+
+        <div class="form-checkbox">
+          <div class="custom-checkbox" id="terms-checkbox" onclick="toggleCheckbox('terms-checkbox')"></div>
+          <label class="checkbox-label">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. You can unsubscribe at any time.</label>
+        </div>
+
+        <button class="form-submit" id="reg-submit" onclick="handleRegister()">Create My Account</button>
+
+        <div class="modal-switch">Already have an account? <a onclick="switchTab('login')">Sign In</a></div>
+      </div>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <div id="login-view" style="display:none;">
+      <div class="modal-header">
+        <div class="modal-logo">FLUX</div>
+        <button class="modal-close" onclick="closeModal()">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tabs">
+          <div class="modal-tab active">Sign In</div>
+          <div class="modal-tab" onclick="switchTab('register')">Create Account</div>
+        </div>
+        <div class="modal-title">Welcome back</div>
+        <p class="modal-subtitle">Sign in to your FLUX account.</p>
+
+        <div class="social-btns">
+          <button class="social-btn" onclick="handleGoogleSignIn()">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885-1.328 1.232-3.142 1.896-5.3 1.896-3.866 0-7-3.134-7-7s3.134-7 7-7c1.89 0 3.47.697 4.688 1.83l-1.894 1.895C10.013 3.99 9.043 3.62 8 3.62c-2.421 0-4.38 1.96-4.38 4.38s1.959 4.38 4.38 4.38c2.209 0 3.72-1.261 3.952-3.005H8V7.558h7.545z" fill="#4285F4"/>
+            </svg>
+            Google
+          </button>
+          <button class="social-btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            GitHub
+          </button>
+        </div>
+
+        <div class="divider-or">or continue with email</div>
+
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input class="form-input" id="login-email" type="email" placeholder="ryan@example.com" oninput="clearErrors()">
+          <div class="form-error" id="err-login-email">Enter a valid email.</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input class="form-input" id="login-password" type="password" placeholder="Your password" oninput="clearErrors()">
+          <div class="form-error" id="err-login-password">Incorrect password.</div>
+        </div>
+
+        <div style="text-align:right;margin-bottom:20px;">
+          <a href="#" style="font-size:13px;color:var(--text-muted);text-decoration:none;">Forgot password?</a>
+        </div>
+
+        <button class="form-submit" id="login-submit" onclick="handleLogin()">Sign In</button>
+
+        <div class="modal-switch">No account yet? <a onclick="switchTab('register')">Create one free</a></div>
+      </div>
+    </div>
+
+    <!-- SUCCESS VIEW -->
+    <div id="success-view" style="display:none;">
+      <div class="modal-header" style="justify-content:flex-end;">
+        <button class="modal-close" onclick="closeModal()">×</button>
+      </div>
+      <div class="modal-success">
+        <div class="success-icon">⚡</div>
+        <div class="success-title">You're in.</div>
+        <p class="success-sub">Your FLUX account is ready. Check your email to confirm, then start building your creative OS.</p>
+        <button class="form-submit" onclick="closeModal()">Let's Go →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ─── MODAL ───
+const overlay = document.getElementById('modal-overlay');
+let currentMode = 'register';
+
+function openModal(mode) {
+  currentMode = mode || 'register';
+  switchTab(currentMode);
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  // Reset after animation
+  setTimeout(() => {
+    document.getElementById('success-view').style.display = 'none';
+    switchTab(currentMode);
+  }, 300);
+}
+
+function handleOverlayClick(e) {
+  if (e.target === overlay) closeModal();
+}
+
+function switchTab(tab) {
+  document.getElementById('register-view').style.display = tab === 'register' ? 'block' : 'none';
+  document.getElementById('login-view').style.display = tab === 'login' ? 'block' : 'none';
+  document.getElementById('success-view').style.display = 'none';
+  currentMode = tab;
+  clearErrors();
+}
+
+// ─── FORM LOGIC ───
+function clearErrors() {
+  document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
+  document.querySelectorAll('.form-input').forEach(el => el.classList.remove('input-error'));
+}
+
+function showError(id, inputId) {
+  const err = document.getElementById(id);
+  if (err) err.classList.add('show');
+  if (inputId) {
+    const input = document.getElementById(inputId);
+    if (input) input.classList.add('input-error');
+  }
+}
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// Password strength
+function checkPasswordStrength(pw) {
+  const fill = document.getElementById('strength-fill');
+  const label = document.getElementById('strength-label');
+  if (!pw) { fill.style.width = '0%'; label.textContent = 'Enter a strong password'; fill.style.background = ''; return; }
+
+  let score = 0;
+  if (pw.length >= 8) score++;
+  if (pw.length >= 12) score++;
+  if (/[A-Z]/.test(pw)) score++;
+  if (/[0-9]/.test(pw)) score++;
+  if (/[^A-Za-z0-9]/.test(pw)) score++;
+
+  const levels = [
+    { pct: '20%', color: '#FF453A', text: 'Too weak' },
+    { pct: '40%', color: '#FF8C42', text: 'Weak' },
+    { pct: '60%', color: '#F5A623', text: 'Fair' },
+    { pct: '80%', color: '#5E9BFF', text: 'Good' },
+    { pct: '100%', color: '#32D74B', text: 'Strong ✓' },
+  ];
+
+  const lvl = levels[Math.min(score, 4)];
+  fill.style.width = lvl.pct;
+  fill.style.background = lvl.color;
+  label.textContent = lvl.text;
+  label.style.color = lvl.color;
+}
+
+// Checkbox
+function toggleCheckbox(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('checked');
+}
+
+// Register
+function handleRegister() {
+  clearErrors();
+  const first = document.getElementById('reg-first').value.trim();
+  const email = document.getElementById('reg-email').value.trim();
+  const password = document.getElementById('reg-password').value;
+  const terms = document.getElementById('terms-checkbox').classList.contains('checked');
+  let valid = true;
+
+  if (!first) { showError('err-first', 'reg-first'); valid = false; }
+  if (!isValidEmail(email)) { showError('err-email', 'reg-email'); valid = false; }
+  if (password.length < 8) { showError('err-password', 'reg-password'); valid = false; }
+
+  if (!valid) return;
+
+  if (!terms) {
+    alert('Please agree to the terms to continue.');
+    return;
+  }
+
+  // Simulate loading
+  const btn = document.getElementById('reg-submit');
+  btn.innerHTML = '<div class="spinner"></div>';
+  btn.disabled = true;
+
+  setTimeout(() => {
+    btn.innerHTML = 'Create My Account';
+    btn.disabled = false;
+    showSuccess();
+  }, 1400);
+}
+
+// Login
+function handleLogin() {
+  clearErrors();
+  const email = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value;
+  let valid = true;
+
+  if (!isValidEmail(email)) { showError('err-login-email', 'login-email'); valid = false; }
+  if (!password) { showError('err-login-password', 'login-password'); valid = false; }
+
+  if (!valid) return;
+
+  const btn = document.getElementById('login-submit');
+  btn.innerHTML = '<div class="spinner"></div>';
+  btn.disabled = true;
+
+  setTimeout(() => {
+    btn.innerHTML = 'Sign In';
+    btn.disabled = false;
+    showSuccess();
+  }, 1200);
+}
+
+function showSuccess() {
+  document.getElementById('register-view').style.display = 'none';
+  document.getElementById('login-view').style.display = 'none';
+  document.getElementById('success-view').style.display = 'block';
+}
+
+// CTA form
+function handleCtaSubmit() {
+  const email = document.getElementById('cta-email').value.trim();
+  if (!isValidEmail(email)) {
+    document.getElementById('cta-email').style.borderColor = 'rgba(255,69,58,0.4)';
+    return;
+  }
+  openModal('register');
+  setTimeout(() => {
+    const regEmail = document.getElementById('reg-email');
+    if (regEmail) regEmail.value = email;
+  }, 100);
+}
+
+// ─── KEYBOARD ───
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Enter') {
+    if (overlay.classList.contains('open')) {
+      if (currentMode === 'register') handleRegister();
+      else handleLogin();
+    }
+  }
+});
+
+// ─── SCROLL ANIMATIONS ───
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+</script>
+
+<!-- FIREBASE -->
+
+
+</body>
+</html>
